@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Fibonacci {
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite um número: ");
@@ -27,5 +28,6 @@ public class Fibonacci {
         // Verificação se o número pertence à sequência
         boolean pertence = (b == n);
         System.out.println("O número " + n + (pertence ? " pertence" : " não pertence") + " à sequência de Fibonacci.");
+        sc.close();
     }
 }
